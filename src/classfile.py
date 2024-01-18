@@ -2,6 +2,7 @@ from datetime import datetime
 
 
 class Transactiondata:
+    """Класс с помощью методов выдает нужную информации из экземляров"""
 
     def __init__(self, id_, date_, state, operationamount, description, to, from_=None):
         #  id_ – id транзакциии
