@@ -2,9 +2,9 @@ from utils import *
 from classfile import *
 
 
-def start_code():
+def start_code(file):
     """Запуск программы"""
-    for item in filter_list():
+    for item in file:
         if "from" in item:
             instance_info = Transactiondata(item["id"], item["date"], item["state"], item["operationAmount"],
                                             item["description"], item["to"], item["from"])
@@ -16,4 +16,4 @@ def start_code():
               f'{instance_info.displays_amount()} {instance_info.displays_currency()}\n')
 
 
-start_code()
+start_code(filter_list())
